@@ -14,6 +14,7 @@ ROBOT_ORDER_URL = "https://robotsparebinindustries.com/#/robot-order"
 PDFS_FOLDER = "./output/pdfs"
 
 browser = Selenium()
+browser.headless = True
 # browser.set_selenium_speed("0.1s")  # type:ignore
 pdf = PDF()
 
@@ -61,7 +62,7 @@ def get_orders():
 
 
 def open_robot_order_website():
-    browser.open_browser(ROBOT_ORDER_URL)
+    browser.open_available_browser(ROBOT_ORDER_URL)
 
 
 def close_annoying_modal():
